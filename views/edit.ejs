@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/edit/<%= car._id %>" method="POST">
+        <div class="container" style=" padding-left:20px; padding-right:20px; height:650px; width:600px; background-color:#F7F8FB">
+        <center>  <h1>Edit</h1> </center>
+        <hr>
+        <label for="color">Color</label>
+        <input type="text" placeholder="<%= car.color %>" name="color" value="<%= car.color %>" >
+        <label for="prezime">Model</label>
+        <input type="text" placeholder="Model" name="model" value="<%= car.model %>" >
+        <label for="year">Year</label><br>
+        <input type="number" placeholder="Enter Year" name="year" value="<%= car.year %>"><br>
+        <label for="preferedPrice">Prefered Price</label>
+        <input type="number" placeholder="Prefered Price" name="preferedPrice" value="<%= car.preferedPrice %>">
+        <label for="price">Price</label>
+        <input type="number" placeholder="Price" name="price" value="<%= car.price %>" >
+          <button type="submit" name="Submit" value="Edit" class="registerbtn">Edit</button>
+          </div>
+          </div>
+      </form>
+</body>
+</html>
