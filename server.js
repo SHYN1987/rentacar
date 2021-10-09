@@ -22,6 +22,20 @@ app.use('/', getCars)
 app.use('/', editCar)
 app.use('/', deleteCar)
 
+
+const addReservation = require('./routes/addReservation')
+const getReservation = require('./routes/getReservation')
+const editReservation = require('./routes/editReservation')
+const deleteReservation = require('./routes/deleteReservation')
+app.use('/reservation', addReservation)
+app.use('/reservation', getReservation)
+app.use('/reservation', editReservation)
+app.use('/reservation', deleteReservation)
+
+
+
+
+
 app.listen(process.env.PORT || 3000, ()=>{
     console.log("Server is runing :P")
 })
