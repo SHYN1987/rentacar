@@ -11,7 +11,8 @@ router.get('/reservation', (req, res) =>{
 router.post('/add', (req, res) =>{
     Reservation.create({
         car: req.body.car,
-        date: req.body.date,
+        startdate: req.body.startdate,
+        enddate: req.body.enddate,
         price: req.body.price,
     })
     console.log("jel radi")

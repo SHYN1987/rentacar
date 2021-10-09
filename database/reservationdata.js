@@ -6,7 +6,11 @@ var ReservationSchema = new mongoose.Schema({
         required: true
     }, 
 
-    date:{
+    startdate:{
+        type:String,
+        required: true
+    },
+    enddate:{
         type:String,
         required: true
     },

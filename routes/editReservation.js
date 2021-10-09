@@ -1,19 +1,18 @@
 const express = require('express');
 const router = express.Router();
-const Car = require('../database/carsdata')
+const Reservation = require('../database/reservationdata')
 
 router.get('/edit/:id',(req, res) =>{
     var id = req.params.id;
-    var user = [];
 
 
-    Car.findById(id)
+    Reservation.findById(id)
               .then(data =>{
                   if(!data){
                       res.status(404).send({ message : "Not found user with id "+ id})
                   }else{
                     res.render("edit", {
-                        car_id: id,
+                        reservation_id: id,
                         car: data
                     });
                   }
@@ -24,16 +23,13 @@ router.get('/edit/:id',(req, res) =>{
   })
 
   router.post('/edit/:id', (req, res)=>{
-    const car = new Car({
-        _id: req.params.id,
-        color: req.body.color,
-        model: req.body.model,
-        year: req.body.year,
-        preferedPrice: req.body.preferedPrice,
-        price: req.body.price
+    const car = new Reservation({
+        car: req.body.car,
+        startdate: req.body.startdate,
+        enddate: req.body.enddate
     })
 
-  Car.findByIdAndUpdate({_id: req.params.id}, car)
+  Reservation.findByIdAndUpdate({_id: req.params.id}, reservation)
 
   .then(data => {
           if(!data){

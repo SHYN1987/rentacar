@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="reservation/edit/<%= reservation._id %>" method="POST">
+        <div class="container" style=" padding-left:20px; padding-right:20px; height:650px; width:600px; background-color:#F7F8FB">
+        <center>  <h1>Edit</h1> </center>
+        <hr>
+        <label for="car">Car</label>
+        <input type="text" placeholder="<%= reservation.car %>" name="color" value="<%= car.color %>" >
+        <label for="startdate">Start date</label>
+        <input type="date" placeholder="Model" name="model" value="<%= reservation.startdate %>" >
+        <label for="enddate">End date</label>
+        <input type="date" placeholder="Model" name="model" value="<%= reservation.enddate %>" >
+       
+          <button type="submit" name="Submit" value="Edit" class="registerbtn">Edit</button>
+          </div>
+          </div>
+      </form>
+</body>
+</html>

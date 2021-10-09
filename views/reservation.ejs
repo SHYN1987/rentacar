@@ -18,10 +18,9 @@
             <div class="col-md-3">
                 <form action="/reservation/add" method="POST">
                     <input type="select" name="car" id="car" placeholder="Select Car" required>
-                    <select>
-                        <option><%= car.model %></option>
-                    </select>
-                    <input type="date" name="date" id="date" placeholder="Select Date" required><br>
+                    <input type="date" name="startdate" id="startdate" placeholder="Select Date" required><br>
+                    <input type="date" name="enddate" id="enddate" placeholder="Select Date" required><br>
+
                     <input type="number" name="price" id="price" placeholder="Enter Price" required><br>
                     <button type="submit">Add</button>
                 </form>
@@ -33,7 +32,9 @@
                         <tr>
                           <th scope="col">ID</th>
                           <th scope="col">Car</th>
-                          <th scope="col">Date</th>
+                          <th scope="col">Start Date</th>
+                          <th scope="col">End Date</th>
+
                           <th scope="col">Price</th>
                       </tr>
                       </thead>
@@ -42,7 +43,8 @@
                             <tr>
                                 <th scope="row"><%= reservation._id %></th>
                                 <th scope="row"><%= reservation.car %></th>
-                                <th scope="row"><%= reservation.date %></th>
+                                <th scope="row"><%= reservation.startdate %></th>
+                                <th scope="row"><%= reservation.enddate %></th>
                                 <th scope="row"><%= reservation.price %></th>
                                 <th scope="row"><a href="/edit/<%= reservation._id %>">Edit</a> <a href="javascript:ReservationDelete('<%= reservation._id %>')">Delete</a></th>
                             </tr>
