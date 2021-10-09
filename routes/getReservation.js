@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const Reservation = require('../database/carsdata')
+const Reservation = require('../database/reservationdata')
+const Car = require('../database/carsdata')
+
 
 router.get('/', (req,res) =>{
     Reservation.find(function(err, reservation){

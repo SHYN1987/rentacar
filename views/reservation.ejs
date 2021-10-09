@@ -16,11 +16,11 @@
         <div class="row">
 
             <div class="col-md-3">
-                <form action="/reservation" method="POST">
-                    <% reservation.forEach(reservation => { %>
-
+                <form action="/reservation/add" method="POST">
                     <input type="select" name="car" id="car" placeholder="Select Car" required>
-                    <% }) %>
+                    <select>
+                        <option><%= car.model %></option>
+                    </select>
                     <input type="date" name="date" id="date" placeholder="Select Date" required><br>
                     <input type="number" name="price" id="price" placeholder="Enter Price" required><br>
                     <button type="submit">Add</button>
