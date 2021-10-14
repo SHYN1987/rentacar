@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Car = require('../database/carsdata')
 
-router.get('/edit/:id',(req, res) =>{
+router.get('/edit/:id', checkAuthenticated, isAdmin,(req, res) =>{
     var id = req.params.id;
     var user = [];
 
@@ -33,6 +33,7 @@ router.get('/edit/:id',(req, res) =>{
         price: req.body.price
     })
 
+ 
   Car.findByIdAndUpdate({_id: req.params.id}, car)
 
   .then(data => {
@@ -50,4 +51,22 @@ router.get('/edit/:id',(req, res) =>{
 });
 
 
+function checkAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) {
+      return next()
+    }
+
+    res.redirect('/login')
+  }
+
+  function isAdmin(req, res, next){
+    if(req.isAuthenticated() && (req.user.email==='starCar@starCar.com')){
+        return next();
+    }
+    res.redirect('/')
+}
+
+
 module.exports = router
+
+
