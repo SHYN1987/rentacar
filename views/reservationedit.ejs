@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,20 +7,172 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="reservation/edit/<%= reservation._id %>" method="POST">
+    <form action="/editReservation/<%= reservation._id %>" method="POST">
         <div class="container" style=" padding-left:20px; padding-right:20px; height:650px; width:600px; background-color:#F7F8FB">
         <center>  <h1>Edit</h1> </center>
-        <hr>
-        <label for="car">Car</label>
-        <input type="text" placeholder="<%= reservation.car %>" name="color" value="<%= car.color %>" >
-        <label for="startdate">Start date</label>
-        <input type="date" placeholder="Model" name="model" value="<%= reservation.startdate %>" >
-        <label for="enddate">End date</label>
-        <input type="date" placeholder="Model" name="model" value="<%= reservation.enddate %>" >
-       
+        <label for="start date">Start Date</label>
+        <input type="date" name="startDate" id="startDate" value="<%=reservation.startDate%>">
+        <label for="end date">End Date</label>
+        <input type="date" name="endDate" id="endDate" value="<%=reservation.endDate%>">
+        <label for="pickUp">Pick Up</label>
+        <input type="text" name="pickUp" id="pickUp" value="<%=reservation.pickUp%>">
+        <label for="dropoff">Drop-off</label>
+        <input type="text" name="dropOff" id="dropOff" value="<%=reservation.dropOff%>">
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" id="firstName" value="<%=reservation.firstName%>">
+        <label for="lastName">Last name</label>
+        <input type="text" name="lastName" id="lastName" value="<%=reservation.lastName%>">
+        <label for="drivingLicence">Driving Licence</label>
+        <input type="text" name="drivingLicence" id="drivingLicence" value="<%=reservation.drivingLicence%>">
+        <label for="phone">Phone</label>
+        <input type="number" name="phone" id="phone" value="<%=reservation.phone%>">
+        <label for="adress">Adress</label>
+        <input type="text" name="adress" id="adress" value="<%=reservation.adress%>">
+        <label for="passportNumber">Passport</label>
+        <input type="number" name="passportNumber" id="passportNumber" value="<%=reservation.passportNumber%>">
           <button type="submit" name="Submit" value="Edit" class="registerbtn">Edit</button>
           </div>
           </div>
       </form>
 </body>
+</html> -->
+
+<!DOCTYPE>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg">
+
+
+    <div class="columns pt-6 mx-4">
+        <div class="column"></div>
+      <div class="column is-half">
+        <form class="box is-half" action="/editReservation/<%= reservation._id %>" method="POST">
+            <section class="hero is-small is-link">
+                <div class="hero-body">
+                  <p class="title">
+                    Edit
+                  </p>
+                  <p class="subtitle">
+                    Make changes
+                  </p>
+                </div>
+              </section>
+    
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field">
+              <label class="label">From date:</label>
+              <div class="control">
+          <input type="date" name="startDate" id="startDate" value="<%=reservation.startDate%>">
+              </div>
+            </div>
+            <div class="field">
+            <label class="label">To date:</label>
+            <div class="control">
+          <input type="date" name="endDate" id="endDate" value="<%=reservation.endDate%>">
+            </div>
+          </div>
+            </div>
+          </div>
+    
+    
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field">
+                <label class="label">Pick-up location:</label>
+                <div class="control has-icons-left">
+              <input class="input" type="text" name="pickUp" id="pickUp" value="<%=reservation.pickUp%>" placeholder="*********">
+              <span class="icon is-small is-left">
+                <i class="fas fa-id-card"></i>
+              </span>
+            </div>
+            </div>
+            <div class="field">
+              <label class="label">Drop-off location:</label>
+              <div class="control has-icons-left">
+            <input class="input" type="text" name="dropOff" id="dropOff" value="<%=reservation.dropOff%>" placeholder="*********">
+            <span class="icon is-small is-left">
+              <i class="fas fa-id-card"></i>
+            </span>
+          </div>
+          </div>
+            </div>
+          </div>
+    
+    
+        <div class="field">
+          <label class="label">First name</label>
+          <div class="control has-icons-left">
+        <input class="input" type="text" name="firstName" id="firstName" value="<%=reservation.firstName%>" placeholder="Name and surname">
+        <span class="icon is-small is-left">
+          <i class="fas fa-user"></i>
+        </span>
+      </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Last name</label>
+            <div class="control has-icons-left">
+          <input class="input" type="text" name="lastName" id="lastName" value="<%=reservation.lastName%>" placeholder="Name and surname">
+          <span class="icon is-small is-left">
+            <i class="fas fa-user"></i>
+          </span>
+        </div>
+          </div>
+    
+        <div class="field">
+          <label class="label">Driving licence</label>
+          <div class="control has-icons-left">
+        <input class="input" type="text" name="drivingLicence" id="drivingLicence" value="<%=reservation.drivingLicence%>" placeholder="*********">
+        <span class="icon is-small is-left">
+          <i class="fas fa-id-card"></i>
+        </span>
+      </div>
+        </div>
+    
+        <div class="field">
+          <label class="label">Phone:</label>
+          <div class="control has-icons-left">
+        <input class="input"type="number" name="phone" id="phone" value="<%=reservation.phone%>" placeholder="+387 ** *** ***">
+        <span class="icon is-small is-left">
+          <i class="fas fa-phone"></i>
+        </span>
+      </div>
+        </div>
+    
+        <div class="field">
+          <label class="label">Address:</label>
+          <div class="control has-icons-left">
+        <input class="input" type="text" name="adress" id="adress" value="<%=reservation.adress%>" placeholder="e.g. Trg Heroja 27">
+        <span class="icon is-small is-left">
+          <i class="fas fa-map-pin"></i>
+        </span>
+      </div>
+        </div>
+    
+        <div class="field">
+          <label class="label">ID/Passport number:</label>
+          <div class="control has-icons-left">
+        <input class="input"type="number" name="passportNumber" id="passportNumber" value="<%=reservation.passportNumber%>" placeholder="*********">
+        <span class="icon is-small is-left">
+          <i class="fas fa-id-card"></i>
+        </span>
+      </div>
+        </div>
+    
+        <button class="button is-link my-3" type="submit">Edit Car</button>
+      </form>
+      </div>
+  <div class="column"></div>
+</div>
+
+
+</body>
 </html>
+
+
