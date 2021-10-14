@@ -4,7 +4,7 @@ const Reservation = require('../database/reservationdata')
 const Car = require('../database/carsdata')
 
 
-router.get('/reservation', (req, res) =>{
+router.get('/reservation', checkAuthenticated,(req, res) =>{
     res.render('reservation')
 })
 
@@ -18,5 +18,13 @@ router.post('/add', (req, res) =>{
     console.log("jel radi")
     res.redirect('/')
 })
+
+function checkAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) {
+      return next()
+    }
+
+    res.redirect('/login')
+  }
 
 module.exports = router
