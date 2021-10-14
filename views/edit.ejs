@@ -1,29 +1,158 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="/css/style.css">
+      </head>
 <body>
+    
     <form action="/edit/<%= car._id %>" method="POST">
-        <div class="container" style=" padding-left:20px; padding-right:20px; height:650px; width:600px; background-color:#F7F8FB">
-        <center>  <h1>Edit</h1> </center>
+ 
         <hr>
-        <label for="color">Color</label>
-        <input type="text" placeholder="<%= car.color %>" name="color" value="<%= car.color %>" >
         <label for="prezime">Model</label>
-        <input type="text" placeholder="Model" name="model" value="<%= car.model %>" >
+        <input class="input" type="text" placeholder="Model" name="model" value="<%= car.model %>" >
+        <select name="color" id="color">
+          <option >Color</option>
+          <option value="Black">Black</option>
+          <option value="White">White</option>
+          <option value="Red">Red</option>
+          <option value="Grey">Grey</option>
+          <option value="Green">Green</option>
+          <option value="Blue">Blue</option>
+          <option value="Yellow">Yellow</option>
+          <option value="Purple">Purple</option>
+        </select>
         <label for="year">Year</label><br>
-        <input type="number" placeholder="Enter Year" name="year" value="<%= car.year %>"><br>
+        <select name="year" id="year" value="<%= car.year %>">
+        <option >Change a year of manufacture</option>
+        <option value=2021>2021</option>
+        <option value=2020>2020</option>
+        <option value=2019>2019</option>
+        <option value=2018>2018</option>
+        <option value=2017>2017</option>
+        <option value=2016>2016</option>
+        <option value=2015>2015</option>
+        <option value=2014>2014</option>
+        <option value=2013>2013</option>
+        <option value=2012>2012</option>
+        <option value=2011>2011</option>
+        <option value=2010>2010</option>
+      </select>
         <label for="preferedPrice">Prefered Price</label>
         <input type="number" placeholder="Prefered Price" name="preferedPrice" value="<%= car.preferedPrice %>">
         <label for="price">Price</label>
         <input type="number" placeholder="Price" name="price" value="<%= car.price %>" >
           <button type="submit" name="Submit" value="Edit" class="registerbtn">Edit</button>
-          </div>
-          </div>
+          
+        
       </form>
+</body>
+</html> -->
+
+<!DOCTYPE>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg">
+
+
+  <div class="columns pt-6 mx-4">
+    <div class="column"></div>
+  <div class="column is-half">
+    <form class="box is-half" action="/edit/<%= car._id %>" method="POST">
+
+
+      <section class="hero is-small is-link">
+        <div class="hero-body">
+          <p class="title">
+            Edit
+          </p>
+          <p class="subtitle">
+            Make changes
+          </p>
+        </div>
+      </section>
+
+
+    <div class="field mt-4">
+      <label class="label">Change Car Model</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Model" name="model" value="<%= car.model %>" >
+      </div>
+    </div>
+
+
+    <div class="field is-horizontal">
+  <div class="field-body">
+    <div class="field">
+    <label class="label">Change Car Color</label>
+    <div class="control">
+      <div class="select">
+        <select name="color" id="color">
+          <option >Color</option>
+          <option value="Black">Black</option>
+          <option value="White">White</option>
+          <option value="Red">Red</option>
+          <option value="Grey">Grey</option>
+          <option value="Green">Green</option>
+          <option value="Blue">Blue</option>
+          <option value="Yellow">Yellow</option>
+          <option value="Purple">Purple</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="field">
+  <label class="label">Change Car Year</label>
+  <div class="control">
+    <div class="select">
+      <select name="year" id="year">
+        <option >Change a year of manufacture</option>
+        <option value=2021>2021</option>
+        <option value=2020>2020</option>
+        <option value=2019>2019</option>
+        <option value=2018>2018</option>
+        <option value=2017>2017</option>
+        <option value=2016>2016</option>
+        <option value=2015>2015</option>
+        <option value=2014>2014</option>
+        <option value=2013>2013</option>
+        <option value=2012>2012</option>
+        <option value=2011>2011</option>
+        <option value=2010>2010</option>
+      </select>
+    </div>
+  </div>
+    </div>
+  </div>
+    </div>
+
+
+    <div class="field">
+      <label class="label">Change Prefered Price</label>
+      <div class="control">
+        <input class="input" type="number" name="preferedPrice" value="<%= car.preferedPrice %>">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Change Price</label>
+      <div class="control">
+        <input class="input" type="number" name="price" value="<%= car.price %>">
+      </div>
+    </div>
+
+    <button class="button is-link my-3" type="submit">Add Car</button>
+ </form>
+  </div>
+  <div class="column"></div>
+</div>
+
+
 </body>
 </html>
