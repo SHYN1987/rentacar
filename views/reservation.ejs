@@ -15,7 +15,7 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-md-3">
+            <!-- <div class="col-md-3">
                 <form action="/reservation/add" method="POST">
                     <input type="select" name="car" id="car" placeholder="Select Car" required>
                     <input type="date" name="startdate" id="startdate" placeholder="Select Date" required><br>
@@ -24,29 +24,33 @@
                     <input type="number" name="price" id="price" placeholder="Enter Price" required><br>
                     <button type="submit">Add</button>
                 </form>
-            </div>
+            </div> -->
 
             <div class="col-md-9">
                 <table class="table">
                     <thead>
                         <tr>
                           <th scope="col">ID</th>
-                          <th scope="col">Car</th>
-                          <th scope="col">Start Date</th>
-                          <th scope="col">End Date</th>
-
+                          <th scope="col">Slika</th>
+                          <th scope="col">Color</th>
+                          <th scope="col">Model</th>
+                          <th scope="col">Year</th>
+                          <th scope="col">Prefered Price</th>
                           <th scope="col">Price</th>
+                          <th scope="col">Options</th>
                       </tr>
                       </thead>
                      <tbody class="table-body">
-                         <% reservation.forEach(reservation => { %>
+                         <% car.forEach(car => { %>
                             <tr>
-                                <th scope="row"><%= reservation._id %></th>
-                                <th scope="row"><%= reservation.car %></th>
-                                <th scope="row"><%= reservation.startdate %></th>
-                                <th scope="row"><%= reservation.enddate %></th>
-                                <th scope="row"><%= reservation.price %></th>
-                                <th scope="row"><a href="/edit/<%= reservation._id %>">Edit</a> <a href="javascript:ReservationDelete('<%= reservation._id %>')">Delete</a></th>
+                                <th scope="row"><%= car._id %></th>
+                                <th scope="row"> <img src="/uploads/images/<%= car.image %>" class="rounded-circle" style="width: 60px; height: 60px;"></th>
+                                <th scope="row"><%= car.color %></th>
+                                <th scope="row"><%= car.model %></th>
+                                <th scope="row"><%= car.year %></th>
+                                <th scope="row"><%= car.preferedPrice %></th>
+                                <th scope="row"><%= car.price %></th>
+                                <th scope="row"><a href="/car/<%= car._id %>">Reserve</a></th>
                             </tr>
                             <% }) %>
                      </tbody>
@@ -54,6 +58,8 @@
             </div>
         </div>
     </div>
+
+    <a href="/show">Show my Reservetions</a>
 
     <script>
         function ReservationDelete(id){
