@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form action="/register" method="POST">
+        <div class="container">
+        <center><h1>Registracija</h1></center>
+        <hr>
+        <input type="text" name="ime" id="ime" placeholder= "Ime" size="12" minlength="3" required />
+        <input type="text" name="prezime" id="prezime" placeholder= "Prezime" size="12" minlength="3" required />
+         <input type="email" name="email" id="email" placeholder="Email" required>
+         <input type="password"  name="password" id="password" placeholder="Password" minlength="5" required>
+          <input type="password" placeholder="Confirm Password" id="confirm_password" required>
+          <center><button type="submit" class="registerbtn1">Register</button><center>
+          <a href="/login" class="loginbtn">Login</a>
+        </div>
+      </form>
+      <script src="/js/script.js"></script>
+</body>
+</html>

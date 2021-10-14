@@ -1,0 +1,35 @@
+<!DOCTYPE>
+<html lang="en" dir="ltr">
+  <head>
+     <meta charset="UTF-8">
+     <link rel="stylesheet" href="/css/style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+   </head>
+<body>
+
+  <div class="box">
+          <!-- Pocetak Login -->
+          <form action="/login" method="POST">
+            <div class="container">
+            <center><h1>Login</h1></center>
+            <hr>
+            <center><h3><%= locals.message %></h3></center>
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            <input type="password" name="password" id="password" placeholder="Password" required>
+            <center><button type="submit" class="registerbtn">Login</button><center>
+              <a href="/register" class="loginbtn">Register</a>
+          </div>
+          </form>
+
+          <!-- Kraj Login -->
+
+    <!--footer-->
+
+
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="reservetions">
+        <table class="table">
+            <thead>
+                <tr>
+                  <th scope="col">Car Model</th>  
+                  <th scope="col">Car Year</th>  
+                  <th scope="col">Car Color</th>
+                  <th scope="col">Start Date</th>
+                  <th scope="col">End Date</th>
+                  <th scope="col">Pick Up</th>
+                  <th scope="col">Drop-off</th>
+                  <th scope="col">First Name</th>
+                  <th scope="col">Last Name</th>
+                  <th scope="col">Driving Licence</th>
+                  <th scope="col">Adress</th>
+                  <th scope="col">Passport</th>
+                  <th scope="col">Options</th>
+              </tr>
+              </thead>
+             <tbody class="table-body">
+                 <% reservation.forEach(reservation => { %>
+                    <tr>
+    
+                       
+                            <th scope="row">
+                                <% cars.forEach(car => { %> 
+        
+                              <%  if(car._id == reservation.auto_id ) { %>
+                                   <%= car.model %>
+                              <%  } %>
+                                   
+                                <% }) %>
+                            </th>
+                        
+                            <th scope="row">
+                                <% cars.forEach(car => { %> 
+        
+                              <%  if(car._id == reservation.auto_id ) { %>
+                                   <%= car.year %>
+                              <%  } %>
+                                   
+                                <% }) %>
+                            </th>
+                            <th scope="row">
+                                <% cars.forEach(car => { %> 
+        
+                              <%  if(car._id == reservation.auto_id ) { %>
+                                   <%= car.color %>
+                              <%  } %>
+                                   
+                                <% }) %>
+                            </th>
+                        <th scope="row"><%= reservation.startDate %></th>
+                        <th scope="row"><%= reservation.endDate %></th>
+                        <th scope="row"><%= reservation.pickUp %></th>
+                        <th scope="row"><%= reservation.dropOff %></th>
+                        <th scope="row"><%= reservation.firstName %></th>
+                        <th scope="row"><%= reservation.lastName %></th>
+                        <th scope="row"><%= reservation.drivingLicence %></th>
+                        <th scope="row"><%= reservation.adress %></th>
+                        <th scope="row"><%= reservation.passportNumber %></th>
+                        <th scope="row"><a href="/editReservation/<%= reservation._id %>">Edit</a><a href="javascript:ReservationDelete('<%= reservation._id %>')">Delete</a></th>
+                    </tr>
+                    <% }) %>
+             </tbody>
+         </table>
+    </div>
+
+
+    <a href="/admin">Go back To admin Panel</a>
+    <script>
+        function ReservationDelete(id){
+    $.ajax({
+        url: '/deleteReservation/'+id,
+        type: 'DELETE',
+        success: function(result) {
+          console.log("Reservation deleted")
+        }
+    });
+    
+    }
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="/css/style.css">
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+</head>
+<body class="bg">
+
+
+  <div class="columns pt-6 mx-4">
+    <div class="column"></div>
+  <div class="column is-four-fifths">
+      <div class="box">
+
+<div class="columns px-6 py-5">
+    <div class="column is-one-third">
+      <p class="title">
+        Reservations List
+      </p>
+      <p class="subtitle">
+        See all reservations
+      </p>
+    </div>
+    <div class="column"> <a href="/admin" class="button is-link is-outlined">Admin Panel</a> </div>
+</div>
+
+
+<!--Pocetak Prvog auta-->
+        <div class="columns is-desktop">
+          <!-- slika auta-->
+          
+          <!-- kraj slika auta-->
+
+          <!-- lista rezervacija auta-->
+          <div class="column is-two-third">
+            <% reservation.forEach(reservation => { %>
+            <div class="box">
+              <div class="field is-horizontal is-full">
+                <div class="columns is-desktop is-full">
+                   <div class="column is-one-fifth mt-5">
+                       <p class="has-text-weight-bold">Earn:</p>
+                       <h2 class="has-text-success">
+                        <% cars.forEach(car => { %> 
+        
+                          <%  if(car._id == reservation.auto_id ) { %>
+                               <%= car.price %>
+                          <%  } %>
+                               
+                            <% }) %>
+                       </h2></div>
+                   <div class="column is-four-fifth">
+                     <div class="field is-horizontal is-full">
+                       <div class="columns is-desktop is-full">
+                          <div class="column is-four-fifth">Car Model:
+                           <b>
+                            <% cars.forEach(car => { %> 
+        
+                              <%  if(car._id == reservation.auto_id ) { %>
+                                   <%= car.model %>
+                              <%  } %>
+                                   
+                                <% }) %>
+                          </b></div>
+                       </div>
+                     </div>
+                     <div class="field is-horizontal is-full">
+                      <div class="columns is-desktop is-full">
+                        <div class="column is-7">Car year: <b>
+                          <% cars.forEach(car => { %> 
+        
+                            <%  if(car._id == reservation.auto_id ) { %>
+                                 <%= car.year %>
+                            <%  } %>
+                                 
+                              <% }) %>
+                        </b></div>
+                        <div class="column is-7">Car color: <b>
+                          <% cars.forEach(car => { %> 
+        
+                            <%  if(car._id == reservation.auto_id ) { %>
+                                 <%= car.color %>
+                            <%  } %>
+                                 
+                              <% }) %>
+                        </b></div>
+                      </div>
+                    </div>
+                    
+                     <div class="field is-horizontal is-full">
+                      <div class="columns is-desktop is-full">
+                         <div class="column is-four-fifth">Full name: <b><%= reservation.firstName %></b> <b><%= reservation.lastName %></b></div>
+                      </div>
+                    </div>
+                    <div class="field is-horizontal is-full">
+                      <div class="columns is-desktop is-full">
+                         <div class="column is-four-fifth">Phone: <b><%= reservation.phone %></b></div>
+                      </div>
+                    </div>
+                     <div class="field is-horizontal is-full">
+                       <div class="columns is-desktop is-full">
+                         <div class="column is-7">From date: <b><%= reservation.startDate %></b></div>
+                         <div class="column is-6">To date: <b><%= reservation.endDate %></b></div>
+                       </div>
+                     </div>
+                     <div class="field is-horizontal is-full">
+                       <div class="columns is-desktop is-full">
+                         <div class="column is-7">Pick-up location: <b><%= reservation.pickUp %></b></div>
+                         <div class="column is-7">Drop-off location: <b><%= reservation.dropOff %></b></div>
+                       </div>
+                     </div>
+                   </div>
+                </div>
+              </div>
+            </div>
+            <div class="buttons is-full is-centered mt-6">
+              <a href="/editReservation/<%= reservation._id %>" class="button is-link is-outlined">Edit</a>
+             <a href="javascript:ReservationDelete('<%= reservation._id %>')" class="button is-link is-outlined">Delete</a>
+             
+            </div>
+            <% }) %>
+           
+
+
+
+            
+            </div>
+            <!-- kraj lista rezervacija auta-->
+        </div>
+        <!--Kraj Prvog auta-->
+
+
+        
+</div>
+</div>
+  <div class="column"></div>
+</div>
+
+
+
+<script>
+  function ReservationDelete(id){
+$.ajax({
+  url: '/deleteReservation/'+id,
+  type: 'DELETE',
+  success: function(result) {
+    console.log("Reservation deleted")
+  }
+});
+
+}
+</script>
+</body>
+</html>

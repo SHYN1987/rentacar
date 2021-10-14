@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Car</th>
+                <th scope="col">Start Date</th>
+                <th scope="col">End Date</th>
+                <th scope="col">Price</th>
+          </tr>
+          </thead>
+         <tbody class="table-body">
+           
+                <tr>
+                    <th scope="row"><%= car._id %></th>
+                    <th scope="row"> <img src="/uploads/images/<%= car.image %>" class="rounded-circle" style="width: 60px; height: 60px;"></th>
+                     <th scope="row"><%= car.color %></th>
+                     <th scope="row"><%= car.model %></th>
+                     <th scope="row"><%= car.year %></th>
+                     <th scope="row"><%= car.preferedPrice %></th>
+                     <th scope="row"><%= car.price %></th>
+                </tr>
+    
+         </tbody>
+     </table>
+
+    <form action="/car/<%= car._id %>" method="POST">
+
+    <input type="date" name="startDate" id="startDate" placeholder="Start Date">
+    <input type="date" name="endDate" id="endDate" placeholder="End Date">
+    <input type="text" name="pickUp" id="pickUp" placeholder="Pick Up Location">
+    <input type="text" name="dropOff" id="dropOff" placeholder="Drop-off Location">
+    <input type="text" name="firstName" id="firstName" placeholder="First Name">
+    <input type="text" name="lastName" id="lastName" placeholder="Last Name">
+    <input type="text" name="drivingLicence" id="drivingLicence" placeholder="Driving Licence">
+    <input type="number" name="phone" id="phone" placeholder="Phone Number">
+    <input type="text" name="adress" id="adress" placeholder="Adress">
+    <input type="number" name="passportNumber" id="passportNumber" placeholder="Passport Number">
+     <button type="submit">Add</button>
+    </form>
+</body>
+</html>
