@@ -13,6 +13,7 @@ router.get('/', checkAuthenticated,(req,res) =>{
 })
 
 router.get('/show', checkAuthenticated,(req,res) =>{
+
   Reservation.find({user_id: req.user._id}, function(err, reservation){
     res.render('showReservetions', {
       reservation : reservation

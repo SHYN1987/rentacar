@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,44 +7,199 @@
     <title>Document</title>
 </head>
 <body>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Car</th>
-                <th scope="col">Start Date</th>
-                <th scope="col">End Date</th>
-                <th scope="col">Price</th>
-          </tr>
-          </thead>
-         <tbody class="table-body">
-           
-                <tr>
-                    <th scope="row"><%= car._id %></th>
-                    <th scope="row"> <img src="/uploads/images/<%= car.image %>" class="rounded-circle" style="width: 60px; height: 60px;"></th>
-                     <th scope="row"><%= car.color %></th>
-                     <th scope="row"><%= car.model %></th>
-                     <th scope="row"><%= car.year %></th>
-                     <th scope="row"><%= car.preferedPrice %></th>
-                     <th scope="row"><%= car.price %></th>
-                </tr>
     
-         </tbody>
-     </table>
 
-    <form action="/car/<%= car._id %>" method="POST">
-
-    <input type="date" name="startDate" id="startDate" placeholder="Start Date">
-    <input type="date" name="endDate" id="endDate" placeholder="End Date">
-    <input type="text" name="pickUp" id="pickUp" placeholder="Pick Up Location">
-    <input type="text" name="dropOff" id="dropOff" placeholder="Drop-off Location">
-    <input type="text" name="firstName" id="firstName" placeholder="First Name">
-    <input type="text" name="lastName" id="lastName" placeholder="Last Name">
-    <input type="text" name="drivingLicence" id="drivingLicence" placeholder="Driving Licence">
-    <input type="number" name="phone" id="phone" placeholder="Phone Number">
-    <input type="text" name="adress" id="adress" placeholder="Adress">
-    <input type="number" name="passportNumber" id="passportNumber" placeholder="Passport Number">
-     <button type="submit">Add</button>
-    </form>
+    
 </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  
+   <body>
+ <%- include('head') %>
+
+    <%- include('navbar') %>
+
+
+
+     <div class="box mx-5">
+
+
+<!--Tekst ispod navbara-->
+     <section class="section mx-6 px-6">
+  <h1 class="title has-text-primary is-uppercase">CAR DETAILS</h1>
+</section>
+<!-- Kraj Tekst ispod navbara-->
+
+
+
+<div class="columns is-desktop mx-6 px-6">
+  <div class="column is-two-third mr-6 mt-5 pt-6">
+    <figure class="image mt-6 pt-6">
+        <img src="/uploads/images/<%= car.image %>" class="rounded-circle" style="width: 100%">
+</figure>
+  </div>
+  <div class="column is-one-third">
+    <div class="box box-radius has-background-black">
+      <div class="columns is-desktop no-margin is-paddingless is-marginless">
+          <div class="column">
+             <div class="columns is-gapless is-multiline is-mobile">
+                <div class="column is-10">
+                   <p class="title is-4 has-text-white"><%= car.model %></p>
+                </div>
+                <div class="column is-2">
+                   <figure class="image is-32x32 level-right pl-1 has-text-right">
+                      <img src="./images/Volvo-Logo.png">
+                   </figure>
+                </div>
+                <div class="column is-12">
+                   <p class="subtitle is-5 has-text-primary pt-1 has-text-left">Starting from 170 KM / Day</p>
+                </div>
+             </div>
+          </div>
+       </div>
+       <hr class="is-paddingless is-marginless my-3 ">
+       <div class="columns is-multiline is-mobile no-margin">
+          <div class="column is-6">
+             <p class="has-text-left has-text-white">Seat Availability</p>
+          </div>
+          <div class="column is-6">
+             <p class="has-text-right has-text-white"><%= car.seat %></p>
+          </div>
+          <div class="column is-6">
+             <p class="has-text-left has-text-white">Year</p>
+          </div>
+          <div class="column is-6">
+             <p class="has-text-right has-text-white"><%= car.year %></p>
+          </div>
+          <div class="column is-6">
+             <p class="has-text-left has-text-white">Fuel</p>
+          </div>
+          <div class="column is-6">
+             <p class="has-text-right has-text-white"><%= car.fueltype %></p>
+          </div>
+          <div class="column is-6">
+             <p class="has-text-left has-text-white">Transmission</p>
+          </div>
+          <div class="column is-6">
+             <p class="has-text-right has-text-white"><%= car.transmission %></p>
+          </div>
+          <div class="column is-6">
+             <p class="has-text-left has-text-white">Car Category</p>
+          </div>
+          <div class="column is-6">
+             <p class="has-text-right has-text-white">
+                <%= car.category %>
+             </p>
+          </div>
+       </div>
+       <div class="buttons is-full is-centered mt-4">
+          <button class="button is-warning is-active px-6">Rent</button>
+       </div>
+    </div>
+  </div>
+</div>
+
+
+<form action="/car/<%= car._id %>" method="POST">
+
+<div class="columns is-desktop mx-6 px-6">
+  <div class="column is-half">
+    <!--Tekst ispod auta-->
+    
+         <section class="section is-paddingless is-marginless my-6">
+      <h1 class="title has-text-primary is-uppercase">PICK-UP / DROP-OFF DETAILS</h1>
+      <input type="date" name="startDate" id="startDate" placeholder="Start Date">
+   <input type="date" name="endDate" id="endDate" placeholder="End Date">
+    </section>
+    <!-- Kraj Tekst ispod auta-->
+    <div class="field has-addons">
+      <div class="control is-expanded">
+        <div class="select">
+          <select name="drop-off">
+            <option value="same">Same drop-off</option>
+            <option value="different">Different drop-off</option>
+          </select>
+        </div>
+      </div>
+    </div>
+<div class="field">
+<div class="control">
+<input class="input" type="text" name="pickUp" id="pickUp" placeholder="e.g. Sarajevo International Airport">
+</div>
+</div>
+<div class="field">
+<div class="control">
+<input class="input" type="text" name="dropOff" id="dropOff" placeholder="e.g. Swiss Hotel, Sarajevo">
+</div>
+</div>
+<label class="panel-block">
+  <input type="checkbox">
+  I accept all car rental conditions. If the selected vehicle is not available
+in the given period, you will be provided with another vehicle from the
+same category with the same characteristics.
+</label>
+<button class="button is-warning mt-3">Proceed to Payment</button>
+
+  </div>
+  <div class="column is-half">
+    <!--Tekst ispod kartice-->
+         <section class="section is-paddingless is-marginless my-6">
+      <h1 class="title has-text-primary is-uppercase">PERSONAL DETAILS</h1>
+    </section>
+    <!-- Kraj Tekst ispod kartice-->
+    <div class="field">
+  <div class="control">
+    <input class="input" type="text" name="firstName" id="firstName" placeholder="First Name">
+  </div>
+</div>
+<div class="field">
+<div class="control">
+<input class="input" type="text" name="lastName" id="lastName"  placeholder="Last Name">
+</div>
+</div>
+<div class="field">
+<div class="control">
+<input class="input" type="text" name="adress" id="adress" placeholder="Email Address">
+</div>
+</div>
+<div class="field">
+<div class="control">
+<input class="input" type="text" name="phone" id="phone" placeholder="Phone Number">
+</div>
+</div>
+<div class="field-body">
+  <div class="field">
+    <div class="control">
+      <textarea class="textarea" placeholder="Additional Informations"></textarea>
+    </div>
+  </div>
+</div>
+<button type="submit">Reserve</button>
+
+</form>
+
+
+
+   <!-- <input type="date" name="startDate" id="startDate" placeholder="Start Date">
+   <input type="date" name="endDate" id="endDate" placeholder="End Date">
+   <input type="text" name="pickUp" id="pickUp" placeholder="Pick Up Location">
+   <input type="text" name="dropOff" id="dropOff" placeholder="Drop-off Location">
+   <input type="text" name="firstName" id="firstName" placeholder="First Name">
+   <input type="text" name="lastName" id="lastName" placeholder="Last Name"> -->
+   <!-- <input type="text" name="drivingLicence" id="drivingLicence" placeholder="Driving Licence"> -->
+   <!-- <input type="number" name="phone" id="phone" placeholder="Phone Number">
+   <input type="text" name="adress" id="adress" placeholder="Adress"> -->
+   <!-- <input type="number" name="passportNumber" id="passportNumber" placeholder="Passport Number"> -->
+  </div>
+</div>
+
+
+
+
+</div>
+<%- include('footer') %>
+
+   </body>
 </html>

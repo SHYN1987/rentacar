@@ -1,30 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservation</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
-</head>
+    <%- include('head') %>
+
 <body>
-    <div class="container">
+    <%- include('navbar') %>
+
+
+    <body>
+
+
+        <div class="box mx-5">
+   
+   
+   <!--Tekst ispod navbara-->
+        <section class="section">
+     <h1 class="title has-text-primary">ECONOMY CLASS RENTAL CAR OPTIONS</h1>
+     <h2 class="subtitle">
+       When you rent an economy car with STAR you will be able to get one of these vehicles below.
+       These are only a small selection and you can see many more fantastic makes and models on our <a href="#" class="has-text-primary">Vehicles Page</a>.  </h2>
+     <h2 class="subtitle">
+       STAR car rental services boasts a wide range of economy vehicles such as Skoda Fabia, Renault Megan and the Ford Focus.
+       Expect a hassle free rental experience with STAR where you are guaranteed a top quality economy rental car for a fantastic price.
+     </h2>
+   </section>
+   <!-- Kraj Tekst ispod navbara-->
+   
+   
+   
+   <!--Prvi red auta-->
+
+        <div class="columns pt-3 mt-3 mx-5">
+          <!--Prvo auto-->
+          <% car.forEach(car => { %>
+
+          <div class="column">
+              <div class="box box-radius has-background-black pt-6 mt-6">
+                  <div class="column is-full no-margin">
+                      <figure class="image margin-minus">
+                        <img src="/uploads/images/<%= car.image %>" class="rounded-circle" style="width: 200px; height: 200px;">                      </figure>
+                  </div>
+   
+                  <div class="columns is-desktop">
+                      <div class="column">
+                          <div class="columns is-gapless is-multiline is-mobile">
+                              <div class="column is-10">
+                                  <p class="title is-4 has-text-white"><%= car.model %></p>
+                              </div>
+                              <div class="column is-2">
+                                  <figure class="image is-32x32 level-right pb-3 has-text-left">
+                                      <img src="./images/Skoda-Logo.png" />
+                                  </figure>
+                              </div>
+                              <div class="column is-12">
+                                  <p class="subtitle is-5 has-text-primary pt-1 has-text-left">Starting from 50 KM / Day</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <hr />
+   
+                  <div class="columns is-multiline is-mobile">
+                      <div class="column is-6">
+                          <p class="has-text-left has-text-white">Seat Availability</p>
+                      </div>
+                      <div class="column is-6">
+                          <p class="has-text-right has-text-white"><%= car.seat %></p>
+                      </div>
+                      <div class="column is-6">
+                          <p class="has-text-left has-text-white">Year</p>
+                      </div>
+                      <div class="column is-6">
+                          <p class="has-text-right has-text-white"><%= car.year %></p>
+                      </div>
+                      <div class="column is-6">
+                          <p class="has-text-left has-text-white">Fuel</p>
+                      </div>
+                      <div class="column is-6">
+                          <p class="has-text-right has-text-white"><%= car.fueltype %></p>
+                      </div>
+                      <div class="column is-7">
+                          <p class="has-text-left has-text-white">Fuel Consumption</p>
+                      </div>
+                      <div class="column is-5">
+                          <p class="has-text-right has-text-white"><%= car.fuelconsumption %></p>
+                      </div>
+                      <div class="column is-6">
+                          <p class="has-text-left has-text-white">Transmission</p>
+                      </div>
+                      <div class="column is-6">
+                          <p class="has-text-right has-text-white"><%= car.transmission %></p>
+                      </div>
+                  </div>
+                  <div class="buttons is-full is-centered mt-4">
+                    <a href="/car/<%= car._id %>">
+                      <button class="button is-warning is-active px-6">Rent</button></a>
+                  </div>
+              </div>
+          </div>
+                               <% }) %>
+
+
+
+
+   <!--Drugo auto-->
+   
+      <!--Kraj cetvrtog auta-->
+   </div>
+   <!--Kraj drugog reda auta-->
+   </div>
+   
+      </body>
+    <!-- <div class="container">
         <div class="row">
 
-            <!-- <div class="col-md-3">
-                <form action="/reservation/add" method="POST">
-                    <input type="select" name="car" id="car" placeholder="Select Car" required>
-                    <input type="date" name="startdate" id="startdate" placeholder="Select Date" required><br>
-                    <input type="date" name="enddate" id="enddate" placeholder="Select Date" required><br>
-
-                    <input type="number" name="price" id="price" placeholder="Enter Price" required><br>
-                    <button type="submit">Add</button>
-                </form>
-            </div> -->
+        
 
             <div class="col-md-9">
                 <table class="table">
@@ -50,6 +139,11 @@
                                 <th scope="row"><%= car.year %></th>
                                 <th scope="row"><%= car.preferedPrice %></th>
                                 <th scope="row"><%= car.price %></th>
+                                <th scope="row"><%= car.seat %></th>
+                                <th scope="row"><%= car.fueltype %></th>
+                                <th scope="row"><%= car.fuelconsumption %></th>
+                                <th scope="row"><%= car.transmission %></th>
+                                <th scope="row"><%= car.category %></th>
                                 <th scope="row"><a href="/car/<%= car._id %>">Reserve</a></th>
                             </tr>
                             <% }) %>
@@ -57,7 +151,7 @@
                  </table>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <a href="/show">Show my Reservetions</a>
 
@@ -74,4 +168,6 @@
     }
     </script>
 </body>
+<%- include('footer') %>
+
 </html>

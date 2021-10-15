@@ -18,7 +18,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({
     storage:storage,
-    limits:{
+    limits:{    
         fieldSize:1024*1024*3
     }
 })
@@ -37,6 +37,11 @@ router.post('/add', upload.single('image'),(req, res) =>{
         year: req.body.year,
         preferedPrice: req.body.preferedPrice,
         price: req.body.price,
+        seat: req.body.seat,
+        fueltype: req.body.fueltype,
+        fuelconsumption: req.body.fuelconsumption,
+        transmission: req.body.transmission,
+        category: req.body.category
     })
     console.log("Uspijesno sacuvano")
     res.redirect('/')

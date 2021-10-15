@@ -6,7 +6,6 @@ const Car = require('../database/carsdata')
 
 router.get('/show', checkAuthenticated,(req,res) =>{
   Car.find(function(err, cars){
-
     Reservation.find({user_id: req.user._id}, function(err, reservation){
       res.render('showReservetions', {
        reservation : reservation,

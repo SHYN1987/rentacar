@@ -24,7 +24,33 @@ var CarSchema = new mongoose.Schema({
     price:{
         type: Number,
         required: true
+    },
+    image:{
+        type: String,
+        required: true
+    },
+    seat:{
+        type: String,
+        required: true
+    },
+    
+    fuelconsumption:{
+        type: String,
+        required: true
+    },
+    transmission:{
+        type: String,
+        required: true
+    },
+    category:{
+        type: String,
+        required: true
+    },
+    fueltype:{
+        type: String,
+        required: true
     }
+    
 })
 
 const Car = mongoose.model('car', CarSchema);

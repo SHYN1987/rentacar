@@ -1,21 +1,42 @@
 var mongoose = require('mongoose')
 
 var ReservationSchema = new mongoose.Schema({
-    car : {
+    auto_id : {
         type: String,
         required: true
-    }, 
+    },
 
-    startdate:{
+    startDate:{
         type:String,
         required: true
     },
-    enddate:{
+    endDate:{
         type:String,
         required: true
     },
-    price:{
+
+    pickUp:{
+        type: String,
+        required: true
+    },
+    dropOff:{
+        type: String,
+        required: true
+    },
+    firstName:{
+        type: String,
+        required: true
+    },
+    lastName:{
+        type: String,
+        required: true
+    },
+    phone:{
         type: Number,
+        required: true
+    },
+    adress:{
+        type: String,
         required: true
     }
 })

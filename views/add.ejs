@@ -30,7 +30,7 @@
       </div>
     </div>
     
-    <div class="field">
+      <div class="field">
         <label class="label">Enter Car Picture</label>
         <div class="control">
           <input class="input" type="file" name="image" id="color" required>
@@ -76,6 +76,12 @@
             <option value=2012>2012</option>
             <option value=2011>2011</option>
             <option value=2010>2010</option>
+            <option value=2010>2009</option>
+            <option value=2010>2008</option>
+            <option value=2010>2007</option>
+
+
+
           </select>
     </div>
   </div>
@@ -97,6 +103,67 @@
       </div>
     </div>
 
+    <div class="field">
+      <label class="label">Seat Availability </label>
+      <div class="control">
+        <input class="input" type="number" name="seat" id="seat" placeholder="5">
+      </div>
+    </div>
+
+  
+
+    <div class="field">
+      <label class="label">Fuel </label>
+      <div class="control">
+        <div class="select">
+            <select name="fueltype" id="fueltype" required>
+                <option value=Diesel>Diesel</option>
+                <option value=Petrol>Petrol</option>
+                <option value=LPG>LPG</option>
+              </select>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="field">
+      <label class="label">Fuel Consumption </label>
+      <div class="control">
+        <input class="input" type="number" name="fuelconsumption" id="fuelconsumption" placeholder="5,6l">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Transmission</label>
+      <div class="control">
+        <div class="select">
+            <select name="transmission" id="transmission" required>
+                <option value=automatik>Automatic</option>
+                <option value=manuelni>Manuel</option>
+              </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Car Category</label>
+      <div class="control">
+        <div class="select">
+            <select name="category" id="category" required>
+                <option value=economy>Economy</option>
+                <option value=middle>Middle</option>
+                <option value=monovolumen>Monovolumen</option>
+                <option value=suv>SUV</option>
+                <option value=premium>Premium Cars</option>
+
+
+
+              </select>
+        </div>
+      </div>
+    </div>
+
+    
     <button class="button is-link my-3" type="submit">Add Car</button>
   </form>
   </div>
