@@ -1,67 +1,134 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-      <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
     <script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
     <script defer src="scripts.js"></script>
     <link rel='stylesheet' href='/css/style.css' />
-
-   </head>
-   <body>
-
-     <!--Navbar-->
-       <!-- Navbar Biba-->
-     <nav class="navbar " role="navigation" aria-label="main navigation">
-   <div class="navbar-brand">
-     <a class="navbar-item" href="https://bulma.io">
-       <img src="/images/logo.png" class="logo">
-     </a>
-
-     <a role="button button7px" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-       <span aria-hidden="true"></span>
-       <span aria-hidden="true"></span>
-       <span aria-hidden="true"></span>
-     </a>
-   </div>
-
-   <div id="navbarBasicExample  " class="navbar-menu">
-
-     <div class="navbar-start">
- <a class="navbar-item px-6  ">
-                   <button class="button button7px is-primary is-outlined buttonnav" style="background-color: #000;"><p style="color: #fff;">Terms of use</p></button>
-
-       </a>
-     </div>
-         <div class="navbar-end">
-
-       <a class="navbar-item">
-         Home
-       </a>
-
-       <a class="navbar-item">
-         About us
-       </a>
-       <a class="navbar-item">
-         Vehicle
-       </a>
-       <a class="navbar-item">
-         Contact
-       </a>
-
- <div class="navbar-item has-dropdown">
-   <a class="navbar-link">
-     <div>
-          <button class="button button7px is-primary is-outlined  is-normal" style="background-color: #000;"><p style="color: #fff;">
-             <img src="/images/united-kingdom.png"> EN/USD</p></button></div>
-   </a>
-       </div>
-     </div>
-   </div>
- </nav>
- </body>
- </html>
+  </head>
+  <body>
+    <!--Navbar-->
+    <!-- Navbar Biba-->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand ml-2 pl-2">
+        <a class="navbar-item" href="#">
+        <img src="./images/full-logo.png" width="200" height="100">
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start ml-3">
+          <div class="navbar-item">
+            <button class="button button7px is-primary is-outlined buttonnav ml-2" style="background-color: #0A1531;">
+              <p class="has-text-white muli-21">Terms of Use</p>
+            </button>
+          </div>
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <a class="navbar-item mr-2 muli-21">
+            Home
+            </a>
+            <a class="navbar-item mr-2 muli-21">
+            About Us
+            </a>
+            <div class="navbar-item has-dropdown is-hoverable mr-2 muli-21">
+              <a class="navbar-link muli-21">
+              Vehicles
+              </a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item">
+                  <div class="columns is-mobile is-centered is-vcentered">
+                    <div class="column">
+                      <figure class="image is-32x32 pt-2">
+                        <img src="./images/economy.png">
+                      </figure>
+                    </div>
+                    <div class="column">
+                      <p class="muli-19">Economy Class</p>
+                    </div>
+                  </div>
+                </a>
+                <hr class="orange-line">
+                <a class="navbar-item">
+                  <div class="columns is-mobile is-centered is-vcentered">
+                    <div class="column">
+                      <figure class="image is-32x32 pt-2">
+                        <img src="./images/middle.png">
+                      </figure>
+                    </div>
+                    <div class="column">
+                      <p class="muli-19">Middle Class</p>
+                    </div>
+                  </div>
+                </a>
+                <hr class="orange-line">
+                <a class="navbar-item">
+                  <div class="columns is-mobile is-centered is-vcentered">
+                    <div class="column">
+                      <figure class="image is-32x32 pt-2">
+                        <img src="./images/mono.png">
+                      </figure>
+                    </div>
+                    <div class="column">
+                      <p class="muli-19"> Monovolumen</p>
+                    </div>
+                  </div>
+                </a>
+                <hr class="orange-line">
+                <a class="navbar-item">
+                  <div class="columns is-mobile is-centered is-vcentered">
+                    <div class="column">
+                      <figure class="image is-32x32 pt-3">
+                        <img src="./images/suv.png">
+                      </figure>
+                    </div>
+                    <div class="column">
+                      <p class="muli-19">SUV</p>
+                    </div>
+                  </div>
+                </a>
+                <hr class="orange-line">
+                <a class="navbar-item">
+                  <div class="columns is-mobile is-centered is-vcentered">
+                    <div class="column">
+                      <figure class="image is-32x32 pt-2">
+                        <img src="./images/premium.png">
+                      </figure>
+                    </div>
+                    <div class="column">
+                      <p class="muli-19">Premium Cars</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <a class="navbar-item mr-4">
+            Contacts
+            </a>
+            <a class="field has-addons mr-2">
+              <p class="control">
+                <span class="select is-primary"accesskey="">
+                  <select class=" has-text-white muli-21" style="background-color: #0A1531;">
+                    <option>BHS/KM</option>
+                    <option>ENG/EUR</option>
+                    <option>ENG/USD</option>
+                  </select>
+                </span>
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>

@@ -1,173 +1,145 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE>
+<html>
     <%- include('head') %>
 
-<body>
-    <%- include('navbar') %>
+   <body>
+
+     <!--Navbar-->
+
+     <!-- Navbar Amar-->
+     <%- include('navbar') %>
+
+         <!--Kraj Navbar Amar -->
+     <!--Kraj navbara-->
+
+     <div class="container mx-6 mb-6 pb-6">
 
 
-    <body>
-
-
-        <div class="box mx-5">
-   
-   
-   <!--Tekst ispod navbara-->
-        <section class="section">
-     <h1 class="title has-text-primary">ECONOMY CLASS RENTAL CAR OPTIONS</h1>
-     <h2 class="subtitle">
-       When you rent an economy car with STAR you will be able to get one of these vehicles below.
-       These are only a small selection and you can see many more fantastic makes and models on our <a href="#" class="has-text-primary">Vehicles Page</a>.  </h2>
-     <h2 class="subtitle">
-       STAR car rental services boasts a wide range of economy vehicles such as Skoda Fabia, Renault Megan and the Ford Focus.
-       Expect a hassle free rental experience with STAR where you are guaranteed a top quality economy rental car for a fantastic price.
-     </h2>
-   </section>
-   <!-- Kraj Tekst ispod navbara-->
-   
-   
-   
-   <!--Prvi red auta-->
-
-        <div class="columns pt-3 mt-3 mx-5">
-          <!--Prvo auto-->
-          <% car.forEach(car => { %>
-
-          <div class="column">
-              <div class="box box-radius has-background-black pt-6 mt-6">
-                  <div class="column is-full no-margin">
-                      <figure class="image margin-minus">
-                        <img src="/uploads/images/<%= car.image %>" class="rounded-circle" style="width: 200px; height: 200px;">                      </figure>
-                  </div>
-   
-                  <div class="columns is-desktop">
-                      <div class="column">
-                          <div class="columns is-gapless is-multiline is-mobile">
-                              <div class="column is-10">
-                                  <p class="title is-4 has-text-white"><%= car.model %></p>
-                              </div>
-                              <div class="column is-2">
-                                  <figure class="image is-32x32 level-right pb-3 has-text-left">
-                                      <img src="./images/Skoda-Logo.png" />
-                                  </figure>
-                              </div>
-                              <div class="column is-12">
-                                  <p class="subtitle is-5 has-text-primary pt-1 has-text-left">Starting from 50 KM / Day</p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <hr />
-   
-                  <div class="columns is-multiline is-mobile">
-                      <div class="column is-6">
-                          <p class="has-text-left has-text-white">Seat Availability</p>
-                      </div>
-                      <div class="column is-6">
-                          <p class="has-text-right has-text-white"><%= car.seat %></p>
-                      </div>
-                      <div class="column is-6">
-                          <p class="has-text-left has-text-white">Year</p>
-                      </div>
-                      <div class="column is-6">
-                          <p class="has-text-right has-text-white"><%= car.year %></p>
-                      </div>
-                      <div class="column is-6">
-                          <p class="has-text-left has-text-white">Fuel</p>
-                      </div>
-                      <div class="column is-6">
-                          <p class="has-text-right has-text-white"><%= car.fueltype %></p>
-                      </div>
-                      <div class="column is-7">
-                          <p class="has-text-left has-text-white">Fuel Consumption</p>
-                      </div>
-                      <div class="column is-5">
-                          <p class="has-text-right has-text-white"><%= car.fuelconsumption %></p>
-                      </div>
-                      <div class="column is-6">
-                          <p class="has-text-left has-text-white">Transmission</p>
-                      </div>
-                      <div class="column is-6">
-                          <p class="has-text-right has-text-white"><%= car.transmission %></p>
-                      </div>
-                  </div>
-                  <div class="buttons is-full is-centered mt-4">
-                    <a href="/car/<%= car._id %>">
-                      <button class="button is-warning is-active px-6">Rent</button></a>
-                  </div>
-              </div>
-          </div>
-                               <% }) %>
+<!--Tekst ispod navbara-->
+     <section class="section">
+  <h1 class="muli-36 has-text-primary">ECONOMY CLASS RENTAL CAR OPTIONS</h1>
+  <h2 class="muli-21 mt-4">
+    When you rent an economy car with STAR you will be able to get one of these vehicles below.<br>
+    These are only a small selection and you can see many more fantastic makes and models on our <a href="#" class="has-text-primary">Vehicles Page</a>.  </h2>
+  <h2 class="muli-21 mt-4">
+    STAR car rental services boasts a wide range of economy vehicles such as Skoda Fabia, Renault Megan and the Ford Focus.<br>
+    Expect a hassle free rental experience with STAR where you are guaranteed a top quality economy rental car for a fantastic price.
+  </h2>
+</section>
+<!-- Kraj Tekst ispod navbara-->
 
 
 
+<!--Prvi red auta-->
+     <div class="columns is-multiline pt-6 mt-6 mx-5">
+       <!--Prvo auto-->
+       <% car.forEach(car => { %>
 
-   <!--Drugo auto-->
-   
-      <!--Kraj cetvrtog auta-->
-   </div>
-   <!--Kraj drugog reda auta-->
-   </div>
-   
-      </body>
-    <!-- <div class="container">
-        <div class="row">
+       <div class="column is-3 ">
+           <div class="box box-radius has-background-black pt-6 mt-6 blackboxCar">
+               <div class="column is-full no-margin carmodel">
+                    <img src="/uploads/images/<%= car.image %>" class="rounded-circle" >
+               </div>
 
-        
+               <div class="columns is-desktop">
+                   <div class="column">
+                       <div class="columns is-gapless is-multiline is-mobile pt-6">
+                           <div class="column is-10">
+                               <p class="muli-32 has-text-white"><%= car.model %></p>
+                           </div>
+                           <div class="column is-2">
+                               <figure class="image is-32x32 level-right pb-3 has-text-left">
+                                   <img src="./images/Skoda-Logo.png" />
+                               </figure>
+                           </div>
+                           <div class="column is-12">
+                               <p class="muli-19 has-text-primary pt-1 has-text-left">Starting from 50 KM / Day</p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <hr class="devider-grey">
 
-            <div class="col-md-9">
-                <table class="table">
-                    <thead>
-                        <tr>
-                          <th scope="col">ID</th>
-                          <th scope="col">Slika</th>
-                          <th scope="col">Color</th>
-                          <th scope="col">Model</th>
-                          <th scope="col">Year</th>
-                          <th scope="col">Prefered Price</th>
-                          <th scope="col">Price</th>
-                          <th scope="col">Options</th>
-                      </tr>
-                      </thead>
-                     <tbody class="table-body">
-                         <% car.forEach(car => { %>
-                            <tr>
-                                <th scope="row"><%= car._id %></th>
-                                <th scope="row"> <img src="/uploads/images/<%= car.image %>" class="rounded-circle" style="width: 60px; height: 60px;"></th>
-                                <th scope="row"><%= car.color %></th>
-                                <th scope="row"><%= car.model %></th>
-                                <th scope="row"><%= car.year %></th>
-                                <th scope="row"><%= car.preferedPrice %></th>
-                                <th scope="row"><%= car.price %></th>
-                                <th scope="row"><%= car.seat %></th>
-                                <th scope="row"><%= car.fueltype %></th>
-                                <th scope="row"><%= car.fuelconsumption %></th>
-                                <th scope="row"><%= car.transmission %></th>
-                                <th scope="row"><%= car.category %></th>
-                                <th scope="row"><a href="/car/<%= car._id %>">Reserve</a></th>
-                            </tr>
-                            <% }) %>
-                     </tbody>
-                 </table>
-            </div>
-        </div>
-    </div> -->
+               <div class="columns is-multiline is-mobile">
+                 <div class="column is-8">
+                     <p class="has-text-left has-text-white muli-16">Seat Availability</p>
+                 </div>
+                 <div class="column is-4">
+                     <p class="has-text-right has-text-white muli-16"><%= car.seat %></p>
+                 </div>
+                 <div class="column is-6">
+                     <p class="has-text-left has-text-white muli-16">Year</p>
+                 </div>
+                 <div class="column is-6">
+                     <p class="has-text-right has-text-white muli-16"><%= car.year %></p>
+                 </div>
+                 <div class="column is-6">
+                     <p class="has-text-left has-text-white muli-16">Fuel</p>
+                 </div>
+                 <div class="column is-6">
+                     <p class="has-text-right has-text-white muli-16"><%= car.fueltype %></p>
+                 </div>
+                 <div class="column is-7">
+                     <p class="has-text-left has-text-white muli-16">Fuel Consumption</p>
+                 </div>
+                 <div class="column is-5">
+                     <p class="has-text-right has-text-white muli-16"><%= car.fuelconsumption %></p>
+                 </div>
+                 <div class="column is-6">
+                     <p class="has-text-left has-text-white muli-16">Transmission</p>
+                 </div>
+                 <div class="column is-6">
+                     <p class="has-text-right has-text-white muli-16"><%= car.transmission %></p>
+                 </div>
+               </div>
+               <div class="buttons is-full is-centered mt-4">
+                <a href="/car/<%= car._id %>">
 
-    <a href="/show">Show my Reservetions</a>
+                   <button class="button is-warning is-active px-6"><p class="muli-22n">Rent</p></button>
+                </a>
+               </div>
+           </div>
+       </div>
+       <% }) %>
 
-    <script>
-        function ReservationDelete(id){
-    $.ajax({
-        url: '/delete/'+id,
-        type: 'DELETE',
-        success: function(result) {
-          console.log("Reservation deleted")
-        }
-    });
-    
-    }
-    </script>
-</body>
-<%- include('footer') %>
+       
+</div>
+</div>
+<!--Kraj drugog reda auta-->
 
-</html>
+<div class="footer">
+<div class="container" >
+
+  <div class="content has-text-centered mx-6 px-6">
+    <div class="columns has-text-white mx-6 px-6">
+  <div class="column">
+  <img src="./images/1.png">
+ </div>
+  <div class="column">
+  <img src="./images/2.png">
+</div>
+  <div class="column">
+  <img src="./images/3.png">
+</div>
+  <div class="column">
+  <img src="./images/4.png">
+  </div>
+</div>
+
+<div class="columns mx-6 px-6">
+  <div class="column">
+  <img src="./images/5.png">
+  </div>
+  <div class="column">
+  <img src="./images/6.png">
+ </div>
+  <div class="column">
+  <img src="./images/7.png">
+ </div>
+  <div class="column">
+  <img src="./images/8.png">
+  </div>
+</div>
+</div>
+
+<%- include('footer2') %>
