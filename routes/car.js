@@ -35,8 +35,10 @@ router.get('/car/:id', checkAuthenticated,(req, res) =>{
       dropOff: req.body.dropOff,
       firstName: req.body.firstName,
       lastName: req.body.lastName,
+      drivingLicence: req.body.drivingLicence,
       phone: req.body.phone,
       adress: req.body.adress,
+      passportNumber: req.body.passportNumber,
       user_id: req.user._id,
       })
     res.redirect('/show')

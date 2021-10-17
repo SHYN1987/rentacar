@@ -1,134 +1,59 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
-    <script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
-    <script defer src="scripts.js"></script>
-    <link rel='stylesheet' href='/css/style.css' />
-  </head>
-  <body>
-    <!--Navbar-->
-    <!-- Navbar Biba-->
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand ml-2 pl-2">
-        <a class="navbar-item" href="#">
-        <img src="./images/full-logo.png" width="200" height="100">
-        </a>
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        </a>
-      </div>
-      <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start ml-3">
-          <div class="navbar-item">
-            <button class="button button7px is-primary is-outlined buttonnav ml-2" style="background-color: #0A1531;">
-              <p class="has-text-white muli-21">Terms of Use</p>
-            </button>
-          </div>
-        </div>
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <a class="navbar-item mr-2 muli-21">
-            Home
-            </a>
-            <a class="navbar-item mr-2 muli-21">
-            About Us
-            </a>
-            <div class="navbar-item has-dropdown is-hoverable mr-2 muli-21">
-              <a class="navbar-link muli-21">
-              Vehicles
-              </a>
-              <div class="navbar-dropdown">
-                <a class="navbar-item">
-                  <div class="columns is-mobile is-centered is-vcentered">
-                    <div class="column">
-                      <figure class="image is-32x32 pt-2">
-                        <img src="./images/economy.png">
-                      </figure>
-                    </div>
-                    <div class="column">
-                      <p class="muli-19">Economy Class</p>
-                    </div>
-                  </div>
-                </a>
-                <hr class="orange-line">
-                <a class="navbar-item">
-                  <div class="columns is-mobile is-centered is-vcentered">
-                    <div class="column">
-                      <figure class="image is-32x32 pt-2">
-                        <img src="./images/middle.png">
-                      </figure>
-                    </div>
-                    <div class="column">
-                      <p class="muli-19">Middle Class</p>
-                    </div>
-                  </div>
-                </a>
-                <hr class="orange-line">
-                <a class="navbar-item">
-                  <div class="columns is-mobile is-centered is-vcentered">
-                    <div class="column">
-                      <figure class="image is-32x32 pt-2">
-                        <img src="./images/mono.png">
-                      </figure>
-                    </div>
-                    <div class="column">
-                      <p class="muli-19"> Monovolumen</p>
-                    </div>
-                  </div>
-                </a>
-                <hr class="orange-line">
-                <a class="navbar-item">
-                  <div class="columns is-mobile is-centered is-vcentered">
-                    <div class="column">
-                      <figure class="image is-32x32 pt-3">
-                        <img src="./images/suv.png">
-                      </figure>
-                    </div>
-                    <div class="column">
-                      <p class="muli-19">SUV</p>
-                    </div>
-                  </div>
-                </a>
-                <hr class="orange-line">
-                <a class="navbar-item">
-                  <div class="columns is-mobile is-centered is-vcentered">
-                    <div class="column">
-                      <figure class="image is-32x32 pt-2">
-                        <img src="./images/premium.png">
-                      </figure>
-                    </div>
-                    <div class="column">
-                      <p class="muli-19">Premium Cars</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel='stylesheet' href='/css/style.css' />
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/kxn5msc.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+
+</head>
+<body>
+<header>
+  <nav id="navbar">
+    <div class="row" id="navRow">
+        <div class="col-md-4">
+            <div class="logo">
+                <a href="#"></a>
             </div>
-            <a class="navbar-item mr-4">
-            Contacts
-            </a>
-            <a class="field has-addons mr-2">
-              <p class="control">
-                <span class="select is-primary"accesskey="">
-                  <select class=" has-text-white muli-21" style="background-color: #0A1531;">
-                    <option>BHS/KM</option>
-                    <option>ENG/EUR</option>
-                    <option>ENG/USD</option>
-                  </select>
-                </span>
-              </p>
-            </a>
-          </div>
         </div>
-      </div>
-    </nav>
-  </body>
-</html>
+        <div class="col-md-3" id="terms">
+            <div class="terms">
+                <a href="#">Terms of Use</a>
+            </div>
+        </div>
+        <div class="col-md-5" id="menu-list">
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Vehicles</a>
+
+
+                      <ul id="dropMenu">
+                          <li><a href="#"><span id="economyCar"></span> Economy Class</a></li>
+                          <li><a href="#"><span id="middleCar"></span> Middle Class</a></li>
+                          <li><a href="#"><span id="monoCar"></span> Monovolumen</a></li>
+                          <li><a href="#"><span id="suvCar"></span> SUV</a></li>
+                          <li id="premiumBorder"><a href="#"><span id="premiumCar"></span> Premium Cars</a></li>
+                          </ul>
+                      </li>
+                    <li><a href="#">Contact</a></li>
+                    <li><select name="" id="moneySelect">
+                      <option value="bhs">BHS/KM</option>
+                      <option value="bhs">ENG/USD</option>
+                      <option value="bhs">ENG/EUR</option>
+                    </select></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+</header>

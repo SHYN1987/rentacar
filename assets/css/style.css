@@ -78,7 +78,7 @@ height:auto;
 .image-max {
   height: 180px;
   width: 300px;
-  z-index: 50;s
+  z-index: 50;
 }
 .border-date {
   border: 2px solid hsl(171, 100%, 41%);
@@ -164,7 +164,6 @@ transition: transform .3s,opacity .3s,-webkit-transform .3s;
 }
 
 .navbar-item {
-  font-family: ;
   font-size: 18px;
   padding-right: 15px;
   padding-left: 15px;
@@ -213,6 +212,7 @@ transition: transform .3s,opacity .3s,-webkit-transform .3s;
 .workinghours {
   color: #02907E;
   font-size: 14px;
+  line-height: 44px;
 }
 
 .iconmiddle{
@@ -358,3 +358,391 @@ width: 100%;
   top:-120px;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Mulish', sans-serif;
+}
+.pickupz {
+  margin-top: 15px;
+  width:100%;
+}
+nav{
+      position: fixed;
+      width: 100%;
+      z-index: 2;
+}
+.fullsize {
+  width:100%;
+}
+.hide{ display:none; }
+.inputBoxBG {
+  border-radius: 6px;
+    box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
+    color: #4a4a4a;
+    display: block;
+    padding: 1.25rem;
+    background:#fff;
+    margin-left:45px;
+    border: 2px solid orange;
+}
+#navRow{
+      margin-top: 30px;
+}
+.sticky {
+      background-color: white;
+      position: fixed;
+      top: 0;
+      width: 100%;
+}
+.logo a{
+      content: url(./images/logo.png);
+      float: right;
+}
+#terms{
+      margin-top: 10px;
+      padding-left: 50px;
+}
+.terms a{
+      background-color: #0A1531;
+      color: white;
+      padding-left: 25px;
+      padding-right: 25px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: 2px solid #00d1b2;
+      border-radius: 9px;
+}
+
+#moneySelect{
+      background-color: #0A1531;
+      color: white;
+      border: 3px solid #00d1b2;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-radius: 5px;
+}
+#menu-list{
+      margin-top: 15px;
+}
+ul{
+      display: inline-flex;
+}
+ul li{
+      padding-right: 35px;
+}
+ul li a{
+      color: black;
+}
+nav ul ul {
+      display: none;
+      position: absolute;
+      top: 80px;
+  }
+
+  /* Display Dropdown on Hover */
+  nav ul li:hover > ul {
+      display: inherit;
+      border-radius: 15px;
+      -webkit-box-shadow: 3px 3px 11px 0px #000000;
+      box-shadow: 3px 3px 11px 0px #000000;
+  }
+  /* Fisrt Tier Dropdown */
+  nav ul ul li{
+      font-size: 17px;
+      letter-spacing: 3px;
+      width: 250px;
+      float: none;
+      display: list-item;
+      position: relative;
+      border-bottom: 2px solid orange;
+
+  }
+  #dropMenu{
+        background-color: white;
+  }
+  #dropMenu li{
+      padding-top: 15px;
+
+  }
+  #economyCar{
+        content: url(./images/economy.png);
+        padding-left: 5px;
+  }
+  #middleCar{
+        content: url(./images/middle.png);
+        padding-left: 5px;
+  }
+  #monoCar{
+        content: url(./images/mono.png);
+        padding-left: 5px;
+  }
+  #suvCar{
+        content: url(./images/suv.png);
+        padding-left: 5px;
+  }
+  #premiumCar{
+        content: url(./images/premium.png);
+        padding-left: 5px;
+  }
+  #premiumBorder{
+        border: none;
+  }
+  .banner{
+      background: url("./images/background.png") no-repeat;
+      height: 95vh;
+      background-size: cover;
+      background-position: center;
+}
+.car{
+      content: url(./images/auto-home.png);
+      position: absolute;
+      top: 240px;
+}
+#inputBox{
+      margin-top: 150px;
+}
+
+.box-input{
+      background-color: white;
+      border: 2px solid orange;
+      /* width: fit-content; */
+      margin-left: 50px;
+      width: 500px;
+}
+input[type=text]{
+     width: 94%;
+    margin-left: 23px;
+    margin-right: 92px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.nesto{
+      background: rgb(255,158,0);
+      background: linear-gradient(180deg, rgba(255,158,0,1) 0%, rgba(255,158,0,1) 0%, rgba(255,115,0,1) 100%);
+      height: 500px;
+}
+.text{
+      margin-top: 100px;
+      margin-left: 130px;
+}
+.text h2{
+      font-size: 30px;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+}
+.text p{
+      margin-bottom: 15px;
+}
+.text a{
+      background-color: #0A1531;
+      color: white;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border: 2px solid #00d1b2;
+      border-radius: 9px;
+}
+
+.blackboxCar {
+      position:relative;
+}
+
+    .carmodel {
+      position:absolute;
+      left:50%;
+      margin-left:-150px;
+      top:-120px;
+}
+.rent-car{
+      margin-top: 60px;
+      margin-bottom: -150px;
+}
+.rent-text{
+      margin-left: 50px;
+      text-align: justify;
+}.rent-text h2{
+      color: #00d1b2;
+      font-size: 35px;
+      margin-bottom: 10px;
+      font-weight: 500;
+}
+.rent-text p{
+      color: black;
+      padding-top: 15px;
+      margin-bottom: 10px;
+}
+.rent-picture{
+      padding-top: 20px;
+      padding-left: 30px;
+      height: 60%;
+      content: url('./images/sell.png');
+}
+#space{
+      margin-bottom: 25px;
+}
+#share{
+      margin-top: 15px;
+      background-color: #0A1531;
+      color: white;
+      padding-left: 25px;
+      padding-right: 25px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: 2px solid #00d1b2;
+      border-radius: 9px;
+}
+.comment{
+      margin-bottom: 20px;
+}
+footer{
+      background-color: #0A1531;
+}
+#pictures{
+      padding-top: 20px;
+      margin-left: 165px;
+}
+#picture1{
+      content: url(./images/1.png);
+}
+#picture2{
+      content: url(./images/2.png);
+}
+#picture3{
+      content: url(./images/3.png);
+}
+#picture4{
+      content: url(./images/4.png);
+}
+#picture5{
+      content: url(./images/5.png);
+}
+#picture6{
+      content: url(./images/6.png);
+}
+#picture7{
+      content: url(./images/7.png);
+}
+#picture8{
+      content: url(./images/8.png);
+}
+.prva-sekcija{
+      margin-top: 19px;
+    margin-left: 108px;
+}
+.logo-white{
+      content: url(./images/logo-white.png);
+      margin-bottom: 15px;
+}
+.footer-text{
+      display: grid;
+}
+.footer-text a{
+      color: white;
+}
+.footer-text a:hover{
+      color: #00d1b2;
+}
+#termsFooter{
+      margin-left: -25px;
+}
+.druga-sekcija{
+      margin-top: 19px;
+      display: grid;
+}
+.druga-sekcija a{
+      color: white;
+      margin-bottom: 10px;
+}
+.druga-sekcija p{
+      color: #00d1b2;
+      font-size: 16px;
+      margin-left: 10px;
+      margin-bottom: 10px;
+}
+.treca-sekcija{
+      margin-top: 15px;
+}
+.treca-sekcija h3{
+      color: white;
+      font-size: 18px;
+      margin-bottom: 10px;
+}
+#day{
+      color: white;
+}
+#hour{
+      color: #00d1b2;
+}
+#work{
+      border-right: 2px solid #00d1b2;
+}
+#location{
+      border-right: 2px solid #00d1b2;
+}
+#slike{
+      margin-bottom: 25px;
+}
+.cetvrta-sekcija{
+      margin-top: 15px;
+      margin-left: 15px;
+}
+.cetvrta-sekcija h3{
+      color: white;
+      font-size: 18px;
+      margin-bottom: 10px;
+}
+.cetvrta-sekcija p{
+      color: white;
+      font-size: 14px;
+}
+#spaceP{
+      margin-top: 15px;
+      margin-bottom: 25px;
+}
+.googleMap{
+      content: url(./images/maps.png);
+      margin-left: 50px;
+}
+.peta-sekcija{
+      margin-top: 15px;
+      color: white;
+}
+.peta-sekcija h3{
+      color: white;
+      font-size: 18px;
+      margin-bottom: 10px;
+}
+.contact{
+      margin-bottom: 15px;
+}
+.social-media p{
+      margin-bottom: 15px;
+}
+#phone{
+      content: url(./images/call.png);
+      padding-right: 10px;
+}
+#mail{
+      content: url(./images/mail.png);
+      padding-right: 10px;
+}
+#instagram{
+      content: url(./images/instagram.png);
+      padding-right: 5px;
+      margin-left: 45px;
+}
+#facebook{
+      content: url(./images/fb.png);
+}
+.after-footer{
+      background-color: #00d1b2;
+      width: 100%;
+      margin-top: 100px;
+      text-align: center;
+      color: white;
+      font-size: 13px;
+}

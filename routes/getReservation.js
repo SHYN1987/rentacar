@@ -4,7 +4,7 @@ const Reservation = require('../database/reservationdata')
 const Car = require('../database/carsdata')
 
 
-router.get('/', checkAuthenticated,(req,res) =>{
+router.get('/', (req,res) =>{
     Car.find(function(err, car){
         res.render('reservation', {
             car : car

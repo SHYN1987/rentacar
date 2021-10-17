@@ -38,7 +38,12 @@ var ReservationSchema = new mongoose.Schema({
     adress:{
         type: String,
         required: true
+    },
+    user_id: {
+        type: String,
+        required: true
     }
+    
 })
 
 const Reservation = mongoose.model('reservation', ReservationSchema);

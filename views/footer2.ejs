@@ -1,78 +1,126 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel='stylesheet' href='/css/style.css' />
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/kxn5msc.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 
-
-<div class="columns mt-6 pt-6 mx-3 px-3 has-text-white">
-
-    <div class="column is-two-fifth footermenu pl-6">
-      <figure class="image  mr-6 pr-6 py-3">
-    <img src="./images/logo-white.png">
-  </figure>
-  <div class="has-text-white">
-  <a href="" class="has-text-white">Home</a>
-  <a href="" class="ml-6 has-text-white">Terms of Use</a>
-  <a class="ml-6 has-text-white">Vehicles</a><br>
-  <a href="" class="has-text-white">About Us</a><br>
-  <a href="" class="has-text-white">Contact</a><br>
+</head>
+<footer>
+  <div class="container" id="slike">
+    <div class="row" id="pictures">
+      <div class="col-md-1"></div>
+      <div class="col-md-2" id="picture1"></div>
+      <div class="col-md-2" id="picture2"></div>
+      <div class="col-md-2" id="picture3"></div>
+      <div class="col-md-2" id="picture4"></div>
+      <div class="col-md-2"></div>
+    </div>
+    <div class="row" id="pictures">
+      <div class="col-md-1"></div>
+      <div class="col-md-2" id="picture5"></div>
+      <div class="col-md-2" id="picture6"></div>
+      <div class="col-md-2" id="picture7"></div>
+      <div class="col-md-2" id="picture8"></div>
+      <div class="col-md-2"></div>
+    </div>
   </div>
+  <div class="container" id="info">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="prva-sekcija">
+          <div class="logo-white"></div>
+        <div class="footer-text">
+          <div class="row">
+            <div class="col-md-6">
+              <a href="#">Home</a>
+            </div>
+            <div class="col-md-6">
+              <a href="#" id="termsFooter">Terms of Use</a>
+            </div>
+          </div>
+          <a href="#">Contact</a>
+          <a href="#">About</a>
+        </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+       <div class="druga-sekcija">
+         <p>Vehicles</p>
+         <a href="#"><span id="economyCar"></span> Economy Class</a></a>
+         <a href="#"><span id="middleCar"></span> Middle Class</a>
+         <a href="#"><span id="monoCar"></span> Monovolumen</a>
+         <a href="#"><span id="suvCar"></span> SUV</a>
+         <a href="#"><span id="premiumCar"></span> Premium Cars</a>
+       </div>
+      </div>
+      <div class="col-md-3" id="work">
+      <div class="treca-sekcija">
+        <h3>Working hours</h3>
+        <div class="row">
+          <div class="col-md-6"><p id="day">Monday</p></div>
+          <div class="col-md-6"><p id="hour">8:00am - 4:00pm</p></div>
+        </div>
+        <div class="row">
+          <div class="col-md-6"><p id="day">Tuesday</p></div>
+          <div class="col-md-6"><p id="hour">8:00am - 4:00pm</p></div>
+        </div>
+        <div class="row">
+          <div class="col-md-6"><p id="day">Wednesday</p></div>
+          <div class="col-md-6"><p id="hour">8:00am - 4:00pm</p></div>
+        </div>
+        <div class="row">
+          <div class="col-md-6"><p id="day">Thursday</p></div>
+          <div class="col-md-6"><p id="hour">8:00am - 4:00pm</p></div>
+        </div>
+        <div class="row">
+          <div class="col-md-6"><p id="day">Friday</p></div>
+          <div class="col-md-6"><p id="hour">8:00am - 4:00pm</p></div>
+        </div><div class="row">
+          <div class="col-md-6"><p id="day">Saturday</p></div>
+          <div class="col-md-6"><p id="hour">8:00am - 4:00pm</p></div>
+        </div><div class="row">
+          <div class="col-md-6"><p id="day">Sunday</p></div>
+          <div class="col-md-6"><p id="hour">8:00am - 4:00pm</p></div>
+        </div>
+      </div>
+      </div>
+      <div class="col-md-2" id="location">
+        <div class="cetvrta-sekcija">
+          <div class="lokacija">
+            <h3>Location</h3>
+            <p>Vojvode Radomira Putnika 146, <br> Istočno Sarajevo 71123</p>
+            <p id="spaceP">Get Directions in Google Maps</p>
+            <div class="googleMap"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="peta-sekcija">
+          <h3>Contact</h3>
+          <div class="contact">
+            <p><span id="phone"></span> +387 66 034 034</p> <br>
+            <p><span id="mail"></span> info@starcar.ba</p>
+          </div>
+          <div class="social-media">
+            <p>We are on social Media</p>
+            <span id="instagram"></span>
+            <span id="facebook"></span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  
-  
-  <div class="is-divider-vertical"></div>
-  
-  
-  
-    <!-- <div class="column is-one-fifth footermenu mt-6 pt-6"><table>
-  
-    <p >Vehicles</p>
-    <a href=""><tr><td><img src="./images/economy.png"></td> <td> Economy Class</td></tr></a>
-    <a href=""><tr><td><img src="./images/middle.png"></td> <td> Middle Class</td></tr></a>
-    <a href=""><tr><td><img src="./images/monovolumen.png"></td> <td> Monovolumen </td></tr></a>
-    <a href=""><tr><td><img src="./images/suv.png"></td> <td> Suv </td></tr></a>
-    <a href=""><tr><td><img src="./images/premium.png"></td> <td> Premium cars </td></tr></a>
-  
-  </table>
-  </div> -->
-  
-    <div class="column is-one-fifth footermenu"><table>
-      <p class="footertitle has-text-white">Working hours</p>
-      <tr><td class="has-text-white">Monday</td> <td class="workinghours"> 8:00 am - 4:00 pm</td></tr>
-      <tr><td class="has-text-white">Tuesday</td> <td class="workinghours"> 8:00 am - 4:00 pm</td></tr>
-      <tr><td class="has-text-white">Wednesday</td> <td class="workinghours"> 8:00 am - 4:00 pm</td></tr>
-      <tr><td class="has-text-white">Thursday</td> <td class="workinghours"> 8:00 am - 4:00 pm</td></tr>
-      <tr><td class="has-text-white">Friday</td> <td class="workinghours"> 8:00 am - 4:00 pm</td></tr>
-      <tr><td class="has-text-white">Saturday</td> <td class="workinghours"> 8:00 am - 4:00 pm</td></tr>
-      <tr><td class="has-text-white">Sunday</td> <td class="workinghours"> 8:00 am - 4:00 pm</td></tr>
-  </table>
+  <div class="after-footer">
+    <p>Copyright © 2021 Star Rent a Car. All rights reserved.</p>
   </div>
-  
-  <div class="is-divider-vertical" data-content="OR"></div>
-  
-    <div class="column is-one-fifth footermenu has-text-white">
-      <p class="footertitle has-text-white">Location</p>
-      <p>Vojvode Radomira Putnika 146</p>
-      <p>Istočno Sarajevo 71123</p>
-      <p class="mt-6">Get Directions in Google Maps</p>
-      <img src="./images/maps.png" class="iconmiddle">
-  </div>
-  
-    <div class="column is-one-fifth footermenu has-text-white">
-      <p class="footertitle ">Contact</p>
-      <p><img src="./images/call.png"> +387 66 034 034</p>
-      <p><img src="./images/mail.png"> info@starcar.ba</p>
-      <p class="mt-6">We are on Social Media</p>
-      <div class="iconmiddle">
-      <img src="./images/fb.png">
-      <img src="./images/instagram.png" >
-           </div>
-  </div>
-  
-  
-  </div>
-  
-  
-  
-  </div>
-  </div>
-     </body>
-  </html>
-  
+</footer>
