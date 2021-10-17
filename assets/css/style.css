@@ -9,6 +9,9 @@
   margin-top: 15px;
   width:100%;
 }
+a {
+      text-decoration: none !important;
+}
 nav{
       position: fixed;
       width: 100%;
@@ -720,12 +723,15 @@ div.footer{
   font-weight: 300;
   font-size: 23px;
   line-height: 28px;
+  text-decoration: none;
+
 }
 .muli-22n {
   font-family: 'Muli';
   font-weight: normal;
   font-size: 22px;
   line-height: 28px;
+  text-decoration: none;
 }
 .muli-30 {
   font-family: 'Muli';
