@@ -18,6 +18,7 @@ app.use('/uploads', express.static('uploads'));
 app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 app.use('/css', express.static(path.resolve(__dirname, "assets/css")))
 app.use('/images', express.static(path.resolve(__dirname, "assets/images")))
+
 // MONGO
 mongoose.connect("mongodb+srv://carRent:carRent@cluster0.vlsd7.mongodb.net/Rent", { useNewUrlParser: true, useUnifiedTopology: true });
 

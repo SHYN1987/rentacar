@@ -1,20 +1,14 @@
-<!DOCTYPE>
-<html>
 
-   <body>
 
-     <!--Navbar-->
+    <%- include('navbar') %>
 
-     <!-- Navbar Amar-->
-     <%- include('navbar') %>
+   
 
-         <!--Kraj Navbar Amar -->
-     <!--Kraj navbara-->
+  
 
      <div class="container mx-6 mb-6 pb-6">
 
 
-<!--Tekst ispod navbara-->
      <section class="section">
   <h1 class="muli-36 has-text-primary">ECONOMY CLASS RENTAL CAR OPTIONS</h1>
   <h2 class="muli-21 mt-4">
@@ -29,9 +23,7 @@
 
 
 
-<!--Prvi red auta-->
      <div class="columns is-multiline pt-6 mt-6 mx-5">
-       <!--Prvo auto-->
        <% car.forEach(car => { %>
 
        <div class="column is-3 ">
@@ -106,39 +98,6 @@
 </div>
 <!--Kraj drugog reda auta-->
 
-<div class="footer">
-<div class="container" >
 
-  <div class="content has-text-centered mx-6 px-6">
-    <div class="columns has-text-white mx-6 px-6">
-  <div class="column">
-  <img src="./images/1.png">
- </div>
-  <div class="column">
-  <img src="./images/2.png">
-</div>
-  <div class="column">
-  <img src="./images/3.png">
-</div>
-  <div class="column">
-  <img src="./images/4.png">
-  </div>
-</div>
-
-<div class="columns mx-6 px-6">
-  <div class="column">
-  <img src="./images/5.png">
-  </div>
-  <div class="column">
-  <img src="./images/6.png">
- </div>
-  <div class="column">
-  <img src="./images/7.png">
- </div>
-  <div class="column">
-  <img src="./images/8.png">
-  </div>
-</div>
-</div>
 
 <%- include('footer2') %>

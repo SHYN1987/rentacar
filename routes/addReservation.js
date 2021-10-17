@@ -5,9 +5,7 @@ const Car = require('../database/carsdata')
 
 
 
-router.get('/reservation', checkAuthenticated,(req, res) =>{
-    res.render('reservation')
-})
+
 
 router.post('/add', (req, res) =>{
     Reservation.create({

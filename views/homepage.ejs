@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/kxn5msc.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+  </head>
+</head>
+
+<body>
+    <%- include('navbar') %>
+
+    <div class="banner">
+      <div class="row">
+        <div class="col-md-6" id="inputBox">
+          <div class="row">
+            <form action="" method="post">
+              <div class="col-md-8 inputBoxBG">
+                <div class="select">
+                  <select name="drop-off" id="location" class="button-radius-small" onchange="show()">
+                    <option value="same">Same drop-off</option>
+                    <option value="different">Different drop-off</option>
+                  </select>
+                </div>
+                <div class="dropoffPicker ">
+                  <div class="select pickupz">
+                    <select name="drop-off" class="button-radius-small fullsize">
+                      <option value="same">Star rent a car headquarters </option>
+                      <option value="different">Sarajevo International Airport</option>
+                      <option value="different">Hotel Europe</option>
+                    </select>
+                  </div>
+                  <div class="select pickupz" id="dropOff" style="margin-top: 15px">
+                    <select name="drop-off" class="button-radius-small fullsize">
+                      <option value="same">Star rent a car headquarters </option>
+                      <option value="different">Sarajevo International Airport</option>
+                      <option value="different">Hotel Europe</option>
+                    </select>
+                  </div>
+                </div>
+                <br>
+                <div class="columns is-desktop hide">
+                  <div class="column is-half">
+                    <div class="content has-text-centered">
+                      <label>Pick-up</label>
+                    </div>
+                    <div class="box border-date" style="border: 2px solid #00d1b2;">
+                      <div class="content has-text-centered">
+                        <p class="title is-1 my-2" id="pickuUpday"></p>
+                        <p class="subtitle is-7 mt-2 mb-4" id="pickUpMonth"></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column is-half">
+                    <div class="content has-text-centered">
+                      <label>Drop-off</label>
+                    </div>
+                    <div class="box border-date" style="border: 2px solid #00d1b2;">
+                      <div class="content has-text-centered">
+                        <p class="title is-1 my-2" id="droppOffDay"></p>
+                        <p class="subtitle is-7 mt-2 mb-4" id="dropOffMonth"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="select fullsize ">
+                      <select name="drop-off" class="button-radius-small calendarPick-up fullsize">
+                        <option value="pickupTime" id="time">Pick-up Time</option>
+                        <input type="hidden" id="pickupTimeFinal" value="">
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="select fullsize">
+                      <select name="drop-off" class="button-radius-small calendarDrop-off fullsize">
+                        <option value="dropoffTime" id="timeDrop">Drop Off Time</option>
+                        <input type="hidden" id="dropofftimeFinal" value="">
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <div class="select ">
+                  <select name="drop-off" class="button-radius-small">
+                    <option value="same">Pick Car Category</option>
+                    <option value="same">Economy Class</option>
+                    <option value="same">Middle Class</option>
+                    <option value="same">Monovolumen</option>
+                    <option value="same">SUV</option>
+                    <option value="same">Premium Cars</option>
+                  </select>
+                </div>
+                <div class="container" id="checkCars">
+                  <div class="row" style="text-align: center;">
+                    <a href="/reservation" class="checkCars" style="text-decoration: none;">Check Available Cars</a>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="text">
+            <h2>Explore Bosnia <br> Effortlessly By Car</h2>
+            <p>Save 30% on average when <br> you book through website</p>
+            <a href="#">Check our Cars</a>
+          </div>
+          <div class="car"></div>
+        </div>
+      </div>
+    </div>
+<div class="nesto">
+    <div class="columns is-multiline pt-6  mx-5" style="margin-top: 0;">
+        <% car.forEach(car => { %>
+      <div class="column is-3 ">
+        <div class="box box-radius has-background-black pt-6 mt-6 blackboxCar">
+          <div class="column is-full no-margin carmodel">
+            <img src="/uploads/images/<%= car.image %>" class="rounded-circle" >
+          </div>
+          <div class="columns is-desktop">
+            <div class="column">
+              <div class="columns is-gapless is-multiline is-mobile pt-6">
+                <div class="column is-10">
+                  <p class="muli-32 has-text-white"><%= car.model %></p>
+                </div>
+                <div class="column is-2">
+                  <figure class="image is-32x32 level-right pb-3 has-text-left">
+                    <img src="./images/Skoda-Logo.png" />
+                  </figure>
+                </div>
+                <div class="column is-12">
+                  <p class="muli-19 has-text-primary pt-1 has-text-left">Starting from 50 KM / Day</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="devider-grey">
+          <div class="columns is-multiline is-mobile">
+            <div class="column is-8">
+              <p class="has-text-left has-text-white muli-16">Seat Availability</p>
+            </div>
+            <div class="column is-4">
+              <p class="has-text-right has-text-white muli-16"><%= car.seat %></p>
+            </div>
+            <div class="column is-6">
+              <p class="has-text-left has-text-white muli-16">Year</p>
+            </div>
+            <div class="column is-6">
+              <p class="has-text-right has-text-white muli-16"><%= car.year %></p>
+            </div>
+            <div class="column is-6">
+              <p class="has-text-left has-text-white muli-16">Fuel</p>
+            </div>
+            <div class="column is-6">
+              <p class="has-text-right has-text-white muli-16"><%= car.fueltype %></p>
+            </div>
+            <div class="column is-7">
+              <p class="has-text-left has-text-white muli-16">Fuel Consumption</p>
+            </div>
+            <div class="column is-5">
+              <p class="has-text-right has-text-white muli-16"><%= car.fuelconsumption %>l</p>
+            </div>
+            <div class="column is-6">
+              <p class="has-text-left has-text-white muli-16">Transmission</p>
+            </div>
+            <div class="column is-6">
+              <p class="has-text-right has-text-white muli-16"><%= car.transmission %></p>
+            </div>
+          </div>
+          <div class="buttons is-full is-centered mt-4">
+            <button class="button is-warning is-active px-6">
+                <a href="/car/<%= car._id %>">
+
+              <p class="muli-22n">Rent</p>
+              </a>
+            </button>
+            </a>
+          </div>
+        </div>
+        
+      </div>
+      <% }) %>
+
+      </div>
+
+    </div>
+    <div class="rent-car">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="rent-text">
+            <h2> Star Car Rental in Sarajevo</h2>
+            <p >Rent a car in Sarajevo with Star and enjoy a premium drive
+              experience at competitive prices. Our highly accessible office,
+              strategically located near both the Sarajevo City Center and
+              Sarajevo International Airport makes it easier for you to book
+              your favorite car model and reach your destination in no time.
+            </p>
+            <p>Make your <a href="#" class="has-text-primary">Booking Online</a> and select your travel dates and the
+              preferred car category. Car categories that you can select from
+              include Economy, Middle Class and Premium Models, SUVs and
+              Monovolumens. Please note that we cannot guarantee that you
+              will receive a specific car model, but a car from your selected
+              category.
+            </p>
+            <p>We also offer attractive deals and extras that will
+              enable you to customize your transportation needs. 
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="rent-picture"></div>
+        </div>
+      </div>
+    </div>
+    <div class="comment">
+      <div class="container">
+        <div class="row">
+          <div class="col md-6">
+            <div class="rent-text">
+              <h2> What Our <br> Customers <br> Say About Us</h2>
+              <p id="space">We are happy when our customers are too</p>
+              <a href="#" id="share">Share your experience too</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      $(function(){
+      
+        $('.calendarPick-up').datetimepicker({
+            //language:  'fr',
+            weekStart: 1,
+            todayBtn:  1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            forceParse: 0,
+            showMeridian: 0
+        }).on('changeDate', function(ev){
+          var dan = ev.date.toString().split(" ")
+          console.log("Pick up day: " + dan[2])
+          var day = ev.date.toString().split(" ")
+          console.log("Pick up day: " + day[0])
+          var month = ev.date.toString().split(" ")
+          console.log("Pick up day: " + month[1])
+          var time = ev.date.toString().split(" ")
+          console.log("Pick up hour: " + time[4])
+          var hour =  time[4].split(":")
+          console.log("Pick up hour: " +hour[0])
+          var minutes = time[4].split(":")
+          console.log("Pick up minutes: " +minutes[1])
+          console.log("Pick up: " + ev.date.toString())
+          $('#pickuUpday').html(dan[2])
+          $('#pickUpMonth').html(day[0]+','+ ' ' +month[1] + ' ' + dan[2])
+          $('#time').html(hour[0]+ ':' + minutes[1] )
+          $('#pickupTimeFinal').val(ev.date)
+      });
+      
+      
+      })
+      
+      $(function(){
+      
+      $('.calendarDrop-off').datetimepicker({
+          //language:  'fr',
+          weekStart: 1,
+          todayBtn:  1,
+          autoclose: 1,
+          todayHighlight: 1,
+          startView: 2,
+          forceParse: 0,
+          showMeridian: 0
+      }).on('changeDate', function(ev){
+        var dan = ev.date.toString().split(" ")
+          console.log("Drop-off day: " + dan[2])
+          var day = ev.date.toString().split(" ")
+          console.log("Drop-off day: " + day[0])
+          var month = ev.date.toString().split(" ")
+          console.log("Drop-off day: " + month[1])
+          var time = ev.date.toString().split(" ")
+          console.log("Pick up hour: " + time[4])
+          var hour =  time[4].split(":")
+          console.log("Pick up hour: " +hour[0])
+          var minutes = time[4].split(":")
+          console.log("Pick up minutes: " +minutes[1])
+          console.log("Drop-off: " + ev.date.toString())
+          $('#droppOffDay').html(dan[2])
+          $('#dropOffMonth').html(day[0]+','+ ' ' +month[1] + ' ' + dan[2])
+          $('#timeDrop').html(hour[0]+ ':' + minutes[1] )
+          $('#dropofftimeFinal').val(ev.date)
+      });
+      
+      
+      })
+    </script>
+    <script>
+      $('#dropOff').hide()
+      
+      function show() {
+      
+      var val = document.getElementById("location").value;
+      
+      if (val === "different") {
+      $('#dropOff').show();
+      }else{
+      $('#dropOff').hide();
+      }
+      }
+      
+      
+      window.onscroll = function() {myFunction()};
+      
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+      
+      function myFunction() {
+        if (window.scrollY >= 20) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+      
+    </script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <%- include('footer2') %>
+
+  </body>
+
+</html>

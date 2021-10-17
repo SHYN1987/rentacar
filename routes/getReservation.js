@@ -6,10 +6,18 @@ const Car = require('../database/carsdata')
 
 router.get('/', (req,res) =>{
     Car.find(function(err, car){
-        res.render('reservation', {
+        res.render('homepage', {
             car : car
         })
     })
+})
+
+router.get('/reservation', (req,res) =>{
+  Car.find(function(err, car){
+      res.render('reservation', {
+          car : car
+      })
+  })
 })
 
 router.get('/show', checkAuthenticated,(req,res) =>{
